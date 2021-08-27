@@ -1,30 +1,47 @@
 const gameState = {}
 
 function preload() {
-  this.load.image('jack', 'assets/img/hero.png');
+  this.load.image('player', 'assets/img/hero.png');
   this.load.image('background', 'assets/img/background.png');
+  this.load.image('platform', 'assets/img/ground.png')
 }
 
 function create() {
+  //ADD BACKGROUND
   this.add.image(400, 300, 'background');
-  gameState.jack = this.add.sprite(300, 300, 'jack');
-  gameState.cursors = this.input.keyboard.createCursorKeys();
+
+  //CREATE JACK
+  gameState.player = this.physics.add.sprite(300, 0, 'player');
+  //make sure jack can't leave the bounds of the screen
+  gameState.player.setCollideWorldBounds(true);
+
+  //CREATE KEYS
+  gameState.keys = this.input.keyboard.createCursorKeys();
+
+  //CREATE FLATFORM
+  const platforms = this.physics.add.staticGroup()
+  platforms.create(300, 550, 'platform')
+
+  //COLLIDER FOR JACK AND PLATFORMS
+  this.physics.add.collider(gameState.player, platforms);
 
 }
 
 function update() {
-  // Update based on keypress here!
-  if (gameState.cursors.right.isDown){
-    gameState.jack.x += 5;
+   // LEFT/RIGHT ARROW KEY MOVEMENTS
+  if (gameState.keys.right.isDown){
+    gameState.player.x += 3;
+    gameState.player.setVelocityX(10);
+  }else if (gameState.keys.left.isDown){
+    gameState.player.x -= 3;
+    gameState.player.setVelocityX(-10);
   }
-  if (gameState.cursors.left.isDown){
-    gameState.jack.x -= 5;
+  else {
+    gameState.player.setVelocityX(0);
   }
-  if (gameState.cursors.down.isDown){
-    gameState.jack.y += 5;
-  }
-  if (gameState.cursors.up.isDown){
-    gameState.jack.y -= 5;
+  //UP ARROW KEY MOVEMENTS
+  if (gameState.keys.up.isDown){
+    gameState.player.y -= 4;
   }
 }
 
@@ -32,19 +49,19 @@ const config = {
 	type: Phaser.AUTO,
 	width: 600,
 	height: 600,
-	backgroundColor: "#5f2a55",
-    inputKeyboard: true,
-    physics: {
-        default: "arcade",
-        arcade: {
-          gravity: { y: 200 }
-        }
-    },
 	scene: {
-    preload,
-    create,
-    update
-	}
+    preload: preload,
+    create: create,
+    update: update
+	},
+  physics: {
+    default: 'arcade',
+    arcade: {
+      gravity: { y: 200 },
+      enableBody: true,
+      debug: true
+    }
+  }
 }
 
 const game = new Phaser.Game(config);

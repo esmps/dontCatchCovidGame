@@ -3,7 +3,8 @@ const gameState = {}
 function preload() {
   this.load.image('player', 'assets/img/hero.png');
   this.load.image('background', 'assets/img/background.png');
-  this.load.image('platform', 'assets/img/ground.png')
+  this.load.image('platform', 'assets/img/ground.png');
+  this.load.image('health_star', 'assets/img/health_star.png');
 }
 
 function create() {
@@ -24,6 +25,15 @@ function create() {
 
   //COLLIDER FOR JACK AND PLATFORMS
   this.physics.add.collider(gameState.player, platforms);
+
+  //ADD HEALTH STARS
+  const health_star = this.physics.add.group();
+  function gen_star() {
+    const xCoord = Math.random() * 600;
+    health_star.create(xCoord, 10, 'health_star');
+  }
+  this.physics.add.collider(health_star, platforms);
+  gen_star();
 
 }
 

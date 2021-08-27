@@ -11,7 +11,7 @@ function create() {
   this.add.image(400, 300, 'background');
 
   //CREATE JACK
-  gameState.player = this.physics.add.sprite(300, 0, 'player');
+  gameState.player = this.physics.add.sprite(30, 0, 'player');
   //make sure jack can't leave the bounds of the screen
   gameState.player.setCollideWorldBounds(true);
 
@@ -20,7 +20,7 @@ function create() {
 
   //CREATE FLATFORM
   const platforms = this.physics.add.staticGroup()
-  platforms.create(300, 550, 'platform')
+  platforms.create(300, 580, 'platform')
 
   //COLLIDER FOR JACK AND PLATFORMS
   this.physics.add.collider(gameState.player, platforms);
@@ -59,7 +59,7 @@ const config = {
     arcade: {
       gravity: { y: 200 },
       enableBody: true,
-      debug: true
+      debug: false
     }
   }
 }

@@ -1,6 +1,6 @@
 # Don't Get COVID!
 
-Avoid COVID at all costs! To play, go [here](https://esmps.github.io/dontGetCovidGame/).
+Avoid COVID at all costs! To play, go [here](https://esmps.github.io/dontCatchCovidGame/).
 
 To learn more about coronavirus, [please go here](https://www.who.int/emergencies/diseases/novel-coronavirus-2019?gclid=Cj0KCQjwpreJBhDvARIsAF1_BU09Bietkb3sxmXzbPi9G1YQRgiRPiJM4h4H3HcEO72NrfeAoZwoxd8aAhdSEALw_wcB).
 

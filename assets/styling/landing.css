@@ -1,0 +1,188 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #881111;
+    font-family: 'Oswald', sans-serif;
+}
+hr{
+    margin: 20px;
+    border: none;
+}
+
+/* NAVIGATION BAR */
+#nav-bar{
+    height: 50px;
+    line-height: 50px;
+    padding: 10px 20px 10px 20px;
+    background-color: #881111;
+}
+.nav-link{
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 20px;
+    float: right;
+    font-family: 'Oswald', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+.nav-link:hover{
+    color: grey;
+}
+
+/* HOME PAGE */
+#home-page{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url("../photos/landingbg.png");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
+}
+#home-page > h1{
+    text-align: center;
+    margin: auto auto 20px auto;
+    font-size: 75px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;
+    /* border: 1px solid black; */
+}
+#home-components{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    margin: auto auto 50px auto;
+}
+#home-title{
+    text-align: center;
+    height: 200px;
+    width: auto;
+    font-size: 20px;
+}
+.home-section{
+    height: 350px;
+    width: 300px;
+    margin: auto auto;
+    /* border: 1px solid black; */
+}
+.home-section > img{
+    height: 400px;
+}
+
+/* BUTTON */
+.btn{
+    height: 50px;
+    width: 100px;
+    font-size: 15px;
+    border-radius: 50px;
+    border: none;
+    background-color: lightgrey;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+    font-family: 'Oswald', sans-serif;
+}
+.btn:hover{
+    background-color: grey;
+}
+button > a{
+    text-decoration: none;
+    color: black;
+}
+
+/* INSTRUCTIONS */
+
+#instruction-page{
+    text-align: center;
+    width: 500px;
+    margin: auto auto;
+}
+#instruction-page > h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+#instructions{
+    height: auto;
+    width: auto;
+    background-color: lightgrey;
+    margin: auto auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+    padding: 20px;
+}
+#key-graphic{
+    height: 250px;
+    border-radius: 25px;
+}
+#example-video{
+    height: 200px;
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+/* ABOUT US */
+
+#about-us-page{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto auto 50px;
+}
+#about-us-page > h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+#developers{
+    height: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto auto;
+    justify-content: space-around;
+}
+.dev-info{
+    width: 300px;
+    height: auto;
+    /* border: 2px solid black; */
+    margin: 20px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: lightgrey;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+
+}
+.dev-info > img{
+    width: 75%;
+    border-radius: 75%;
+    
+}
+.logo > img{
+    height: 30px;
+    width: 30px;
+    padding: 10px;
+}
+
+/* FOOTER */
+footer{
+    height: 50px;
+    width: 100%;
+    background-color:#881111;
+    line-height: 50px;
+}
+footer > p {
+    font-size: 18px;
+    padding-left: 20px;
+}
+
+
+
+@media only screen and (max-width: 725px) {
+    #instruction-page{
+        width: 400px;
+    }
+  }

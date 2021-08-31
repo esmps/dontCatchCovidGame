@@ -1,17 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Don't Catch COVID</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Catch COVID!</title>
+    <link rel="stylesheet" href="assets/styling/landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.min.js"></script>
-  <script defer src="phaser.js"></script>
+    <div id="home-page">
+        <nav id="nav-bar">
+            <a class="nav-link" href="https://www.cdc.gov/coronavirus/2019-ncov/index.htmllanding" target="_blank">LEARN ABOUT COVID</a>
+            <a class="nav-link" href="#about-us-page">ABOUT US</a>
+            <a class="nav-link" href="#instruction-page">INSTRUCTIONS</a>
+            <a class="nav-link" href="game.html">PLAY</a>
+        </nav>
+        <h1>DON'T CATCH COVID!</h1>
+        <div id="home-components">
+            <div class="home-section" id="home-title">
+                <h2>Avoid COVID at all costs!</h2>
+                <button class="btn" id="play"><a href="game.html" target="_blank">Let's Play!</a></button>
+            </div>
+        </div>
+    </div>
+<hr>
+    <div id="instruction-page">
+        <h2>INSTRUCTIONS</h2>
+        <div id="instructions">
+            <video autoplay id="example-video">
+                <source src="" type="video/mp4">
+            </video>
+            <h3>Mission</h3>
+            <p>Navigate through COVID to collect life-saving masks and vaccines!</p>
+            <div>
+                <h3>Keys</h3>
+                <p>Use these keys to move around.</p>
+                <img id="key-graphic" src="assets/photos/keys.png">
+            </div>
+        </div>
+    </div>
+<hr>
+    <div id="about-us-page">
+        <h2>DEVELOPERS</h2>
+        <div id="developers">
+            <div class="dev-info">
+                <p>Emma P-S</p>
+                <img src="assets/photos/emma.jpeg">
+                <p>Springboard Fellow '21</p>
+                <div id="media">
+                    <a class="logo" href="https://github.com/esmps" target="_blank"><img src="assets/photos/logo-github.png"></a>
+                    <a class="logo" href="https://www.linkedin.com/in/esmps/" target="_blank"><img src="assets/photos/logo-linkedin.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Mintbean Hackathon 2021</p>
+    </footer>
 </body>
-
-</html>

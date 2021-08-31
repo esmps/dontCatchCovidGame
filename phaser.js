@@ -11,16 +11,15 @@ const HEIGHT = 600;
 function preload() {
   /***************** LOAD IMAGES *****************/
   this.load.image('player', 'assets/img/person.png');
-  this.load.image('background', 'assets/img/park.png');
+  this.load.image('background', 'assets/img/background.png');
   this.load.image('platform', 'assets/img/platform.png');
   this.load.image('life', 'assets/img/life.png');
   this.load.image('mask', 'assets/img/mask.png');
   this.load.image('covid', 'assets/img/covid.png');
-  this.load.image('vaccine', 'assets/img/vaccine.png');
+  this.load.image('vaccine', 'assets/img/syringe.png');
 }
 
 function create() {
-
 /***************** CREATE ELEMENTS *****************/
   //CREATE BACKGROUND
   this.add.image(400, 300, 'background');
@@ -43,9 +42,10 @@ function create() {
   let life1 = healthLives.create(775, 25, 'life');
   let life2 = healthLives.create(735, 25, 'life');
   let life3 = healthLives.create(695, 25, 'life');
+  // healthLives.setScale(3);
 
   //SET GAME SCORE TEXT
-  gameState.scoreText = this.add.text(10, 5, `Total Score: 0\nHigh Score: ${gameState.highScore}\nMasks Collected: 0\nVaccines Collected: 0`, { fontFamily: '"Oswald", sans-serif', fontSize: '18px', fill: '#FFFFFF' });
+  gameState.scoreText = this.add.text(10, 5, `Total Score: 0\nHigh Score: ${gameState.highScore}\nMasks Collected: 0\nVaccines Collected: 0`, { fontFamily: '"Oswald", sans-serif', fontSize: '1rem', fill: '#FFFFFF' });
 
 /***************** COVID SPRITE *****************/
   //ADD COVID SPRITE AT RANDOM LOCATION
@@ -200,11 +200,11 @@ function update() {
    // LEFT/RIGHT ARROW KEY MOVEMENTS
   if (gameState.keys.right.isDown){
     gameState.player.x += 5;
-    gameState.player.setVelocityX(50);
+    gameState.player.setVelocityX(100);
     gameState.player.setFlipX(false);
   }else if (gameState.keys.left.isDown){
     gameState.player.x -= 5;
-    gameState.player.setVelocityX(-50);
+    gameState.player.setVelocityX(-100);
     gameState.player.setFlipX(true);
   }
   else {
@@ -224,6 +224,9 @@ const config = {
     create: create,
     update: update
 	},
+  scale: {
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
   physics: {
     default: 'arcade',
     arcade: {

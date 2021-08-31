@@ -1,0 +1,31 @@
+body{
+    background-color: #881111;
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    font-family: 'Oswald', sans-serif;
+}
+
+header{
+    height: 50px;
+    color: black;
+    background-color: #881111;
+    line-height: 50px;
+    padding: 10px 20px 10px 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+#home{
+    float: right;
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+}
+#home:hover{
+    color: grey;
+}
+canvas{
+    width: 70%;
+    margin: auto auto;
+}

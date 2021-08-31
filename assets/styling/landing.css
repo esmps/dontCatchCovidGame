@@ -117,12 +117,6 @@ button > a{
     height: 250px;
     border-radius: 25px;
 }
-#example-video{
-    height: 200px;
-    width: 100%;
-    border: 1px solid black;
-    margin-top: 20px;
-}
 
 /* ABOUT US */
 
@@ -166,6 +160,27 @@ button > a{
     padding: 10px;
 }
 
+/* COVID RESOURCES*/
+#resource-page{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto auto 50px;
+}
+#resource-page > h2{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.link:hover{
+    color: grey;
+}
+
 /* FOOTER */
 footer{
     height: 50px;
@@ -191,5 +206,8 @@ footer > p {
     .nav-link{
         font-size: 15px;
         padding-left: 10px;
+    }
+    video{
+        width: 100%;
     }
   }

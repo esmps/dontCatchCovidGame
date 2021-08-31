@@ -149,7 +149,6 @@ button > a{
     width: 300px;
     height: auto;
     /* border: 2px solid black; */
-    margin: 20px;
     padding: 20px;
     font-size: 20px;
     background-color: lightgrey;
@@ -181,8 +180,16 @@ footer > p {
 
 
 
-@media only screen and (max-width: 725px) {
+@media only screen and (max-width: 625px) {
     #instruction-page{
         width: 400px;
+    }
+    #home-page > h1{
+        font-size: 50px;
+        margin-top: 25px;
+    }
+    .nav-link{
+        font-size: 15px;
+        padding-left: 10px;
     }
   }

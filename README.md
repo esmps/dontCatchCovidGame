@@ -16,7 +16,7 @@ Be on the lookout for life-saving hearts to replenish your lives and keep collec
 
 Use these keys to move around.
 
-![](https://esmps.github.io/dontGetCovidGame/assets/photos/keys.png)
+![](https://esmps.github.io/dontCatchCovidGame/assets/photos/keys.png)
 
 ## RESOURCES
 
@@ -27,3 +27,15 @@ Use these keys to move around.
 [Find COVID vaccine near you](https://www.vaccines.gov/) (US)
 
 [COVID-19 News](https://www.google.com/search?q=covid-19&biw=1082&bih=766&tbm=nws&sxsrf=AOaemvL5eQS4QgaYiRUZy2_VpKxxJZbJ2g%3A1630396540399&ei=fOAtYefoF8rk-gSjlrCoBw&oq=covid-19&gs_l=psy-ab.3..0i433i131i273k1l2j0i512i433i131k1l8.860.1145.0.1379.3.1.0.2.2.0.80.80.1.1.0....0...1c.1.64.psy-ab..0.3.87....0.IWs6u4CHct8)
+
+## LOCAL DEPLOYMENT
+
+To deploy locally using Python 3, run the following commands in your terminal:
+
+`git clone https://github.com/esmps/dontCatchCovidGame.git`
+
+`cd dontCatchCovidGame`
+
+`python3 -m http.server`
+
+Then, in your browser, go to http://localhost:8000/ and have fun!

@@ -17,6 +17,7 @@ Be on the lookout for life-saving hearts to replenish your lives and keep collec
 Use these keys to move around.
 
 ![](https://esmps.github.io/dontCatchCovidGame/assets/photos/keys.png)
+<img src="https://esmps.github.io/dontCatchCovidGame/assets/photos/keys.png" alt="key guide" width="200">
 
 ## RESOURCES
 

@@ -39,3 +39,5 @@ To deploy locally using Python 3, run the following commands in your terminal:
 `python3 -m http.server`
 
 Then, in your browser, go to http://localhost:8000/ and have fun!
+
+When you are done playing, go back to your terminal an type Control+C to end the server.
